@@ -1,6 +1,6 @@
 /* Book My Show Project Page Styles */
 .bookmyshow-container {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     background: #f8f9fa;
 }
 
@@ -33,45 +33,45 @@
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem;margin-left: 0rem;
 }
 
+
 .description-text {
-    flex: 1;
-    max-width: 60%;
-    font-size: 1.1rem;
-    color: #444;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	 flex: 0 0 65%;
+    background-color: #f9f9f9; /* Light background for better readability */
+    border: 1px solid #ddd; /* Subtle border for definition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the box */
+    margin: 10px 0; /* Spacing outside the box */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    color: #333; /* Neutral text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .description-text p {
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.description-text strong {
-    color: #0066ff;
-    font-weight: bold;
-}
-
-.description-text em {
-    font-style: italic;
-    color: #777;
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Improved readability */
 }
 
 .description-text ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 1.5rem;
+    list-style-type: disc; /* Bulleted list */
+    margin-left: 20px; /* Indentation for list items */
+    padding-left: 20px; /* Adjust spacing */
 }
 
 .description-text ul li {
-    margin-bottom: 0.8rem;
-    font-size: 1.1rem;
-    color: #555;
+    margin-bottom: 8px; /* Space between list items */
+}
+
+.description-text em {
+    font-style: italic; /* Highlight emphasis text */
+    color: #555; /* Slightly lighter color for emphasis text */
+}
+
+.description-text strong {
+    color: #222; /* Darker color for bold text */
+    font-weight: bold; /* Strong emphasis */
 }
 
 .tools-used {
@@ -118,4 +118,193 @@
 
 .cta .btn:hover {
     background-color: #2980b9;
+}
+
+
+/* For smaller screens, adjust heading size */
+@media (max-width: 768px) {
+    .about-project {
+        padding: 20px 15px;  /* Reduced padding */
+    }
+
+    .about-project h2 {
+        font-size: 2em;  /* Slightly smaller font for headings */
+    }
+
+    .about-project p {
+        font-size: 1em;  /* Slightly smaller font for paragraphs */
+        padding: 0 10px;  /* Added padding for better spacing */
+    }
+}
+
+/* For very small screens (e.g., phones in portrait mode) */
+@media (max-width: 480px) {
+    .about-project {
+        padding: 15px 10px;  /* Further reduce padding */
+    }
+
+    .about-project h2 {
+        font-size: 1.8em;  /* Further reduce heading size */
+    }
+
+    .about-project p {
+        font-size: 0.9em;  /* Reduce paragraph text size */
+        margin-bottom: 15px;  /* Adjust paragraph margin */
+    }
+}
+@media (max-width: 768px) {
+    .description-wrapper {
+        flex-direction: column; /* Stack the items vertically */
+        gap: 1rem; /* Adjust the gap between sections */
+    }
+
+    .description-text,
+    .tools-used {
+        max-width: 100%; /* Make each section full-width */
+    }
+}
+  /* Styles for Microservices Section */
+        .microservices-section {
+            padding: 1.3rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .microservices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-more-info {
+            padding: 0.5rem 1rem;
+            background: #0066ff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-more-info:hover {
+            background: #0055cc;
+        }
+#popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure the popup is on top */
+}
+
+.popup-content {
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #222;
+}
+
+.popup-content p {
+    line-height: 1.6;
+}
+
+.popup-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+/* Add space between text and "View GitHub" button */
+.view-github-btn {
+    display: block;
+    margin-top: 20px; /* Adjust the margin to provide space */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view-github-btn:hover {
+    background-color: #0056b3;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer; /* Show pointer cursor on close button */
+}
+
+#popup-overlay .service-card {
+    margin-bottom: 10px;
+}
+
+/* Add margin to the 'More Info' button to avoid it being too close to the text */
+.service-card .btn-more-info {
+    margin-top: 10px;
+}
+
+.Chess-Image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-screenshot {
+    width: 100%;
+    max-width: 200px; /* Adjust this value to fit your image size */
+    height: auto;
+    border-radius: 4px; /* Optional: for rounded corners */
+}
+.project-icon {
+    width: 24px; /* Adjust the size of the icon */
+    height: 24px;
+    margin-right: 10px; /* Space between the icon and text */
+    vertical-align: middle; /* Align the icon with the text */
 }
