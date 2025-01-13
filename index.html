@@ -6,22 +6,85 @@
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+	 <style>
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-image: url('./Icons/up-arrow.png'); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+        #scrollTopBtn:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body>
+
+ <button id="scrollTopBtn" onclick="scrollToTop()"></button>
     <header>
         <nav>
             <div class="logo">Rahul Ravuri</div>
             <ul class="nav-links">
-                <li><a href="#projects" class="nav-btn">Projects</a></li>
-                <li><a href="#contact" class="nav-btn" id="contact-link">Contact</a></li>
-				 <li><button  id="open-popup" class="skills-btn">Skills</button></li>
-            </ul>
+			 <li>
+       <a href="#" id="open-popup" class="nav-btn">
+    <img src="./Icons/skills.png" alt="Skills Icon" id="open-popup-img" class="nav-icon">
+    Skills
+</a>
+    </li>
+    <li>
+        <a href="#projects" class="nav-btn">
+            <img src="./Icons/search.png" alt="Project Icon" class="nav-icon">
+            Projects
+        </a>
+    </li>
+    <li>
+        <a href="#contact" class="nav-btn" id="contact-link">
+            <img src="./Icons/contact-mail.png" alt="Contact Icon" class="nav-icon">
+            Contact
+        </a>
+    </li>
+
+	
+</ul>
         </nav>
     </header>
 	<div id="skills-popup" class="popup">
     <div class="popup-content">
         <span class="close-btn">&times;</span>
         <h2>My Skills</h2>
+			 <a href="https://leetcode.com/u/rahulravuri/"  target="_blank" class="social-link">
+            <img src="./Icons/programming.png" alt="LeetCode" style="width: 30px; height: 30px;">
+			<p>Leetcode</p>
+        </a>
+		<div class="skills-category">
+            <h3>Coding Languages</h3>
+            <div class="skills-box">
+                <span>Java</span>
+                <span>SQL</span>
+                <span>PL/SQL</span>
+				<span>Python</span>
+            </div>
+        </div>
+		  <div class="skills-category">
+            <h3>Backend</h3>
+            <div class="skills-box">
+                <span>Spring Boot</span>
+                <span>Java</span>
+                <span>REST APIs</span>
+				<span>JWT</span><span>OAUTH2.0</span><span>JPA</span><span>JUNIT</span>
+            </div>
+        </div>
         <div class="skills-category">
             <h3>SQL Databases</h3>
             <div class="skills-box">
@@ -38,78 +101,63 @@
                 <span>MongoDB</span>
             </div>
         </div>
+		 <div class="skills-category">
+            <h3>DevOps</h3>
+            <div class="skills-box">
+                <span>Git</span>
+                <span>Docker</span>
+                <span>AWS</span>
+                <span>Jenkins</span>
+            </div>
+        </div>
         <div class="skills-category">
             <h3>AWS</h3>
             <div class="skills-box">
                 <span>EC2</span>
                 <span>S3</span>
                 <span>Lambda</span>
-                <span>RDS</span>
-            </div>
-        </div>
-        <div class="skills-category">
-            <h3>Backend</h3>
-            <div class="skills-box">
-                <span>Spring Boot</span>
-                <span>Java</span>
-                <span>REST APIs</span>
             </div>
         </div>
 		 <div class="skills-category">
-            <h3>AWS</h3>
+            <h3>Message Brokers</h3>
             <div class="skills-box">
-                <span>EC2</span>
-                <span>S3</span>
-                <span>Lambda</span>
-                <span>RDS</span>
+                <span>Apache Kafka</span>
+				 <span>Redis </span>
             </div>
         </div>
-        <div class="skills-category">
-            <h3>Backend</h3>
-            <div class="skills-box">
-                <span>Spring Boot</span>
-                <span>Java</span>
-                <span>REST APIs</span>
-            </div>
-        </div> <div class="skills-category">
-            <h3>AWS</h3>
-            <div class="skills-box">
-                <span>EC2</span>
-                <span>S3</span>
-                <span>Lambda</span>
-                <span>RDS</span>
-            </div>
-        </div>
-        <div class="skills-category">
-            <h3>Backend</h3>
-            <div class="skills-box">
-                <span>Spring Boot</span>
-                <span>Java</span>
-                <span>REST APIs</span>
-            </div>
-        </div>
+		
+		
     </div>
 </div>
     <main class="hero-container">
         <section class="hero">
             <h1>HEY, I'M Rahul Ravuri</h1>
-            <p>A Frontend BackEnd Web Developer building the Application side of Websites that leads to the success of the overall product</p>
+            <p>A Backend Web Developer focused on building robust application logic and server-side functionalities that drive the success of the overall product.</p>
         </section>
+		
+		
     </main>
+	
+	  <div class="resume-download">
+        <a href="https://github.com/yourusername/your-repository/raw/main/resume.pdf" class="btn-download" target="_blank" download>
+            Download My Resume
+        </a>
+    </div>
+
 	 <section id="projects" class="projects-section">
-        <h2>My Top Projects</h2>
+        <h2>My  Projects</h2>
         <div class="project-cards">
             <div class="project-card" id="projects-card1">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of the project goes here. Highlight key features and technologies used.</p>
+                <img src="./Icons/watching-a-movie.png" alt="Project 1">
+                <h3>BookMyShow-like Application</h3>
+                <p>Developed a scalable backend system for a BookMyShow-like application, enabling seamless booking and ticket management.</p>
                 <a href="BookMyShow.html" class="btn">View Project</a>
             </div>
             <div class="project-card" id="projects-card2">
-                <img src="project3.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Description of the project goes here. Highlight key features and technologies used.</p>
-                <a href="#" class="btn">View Project</a>
+                <img src="./Icons/chess-board.png" alt="Project 3">
+                <h3>ChessGame Application</h3>
+                <p>Designed and implemented a multiplayer chess game with real-time move tracking and player interaction.</p>
+                <a href="ChessGame.html" class="btn">View Project</a>
             </div>
         </div>
     </section>
@@ -117,30 +165,44 @@
     <footer id="footer">
         <p>&copy; 2025 Rahul Ravuri. Built with the help of ChatGPT. </p>
 		 <div id="contact"  class="contact-info">
-                <p>Email: <a href="mailto:ram@example.com">ram@example.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+                <p>Email: <a href="mailto:rahulravuri057@gmail.com">rahulravuri057@gmail.com</a></p>
+                <p>Phone: <a href="tel:+916301921161">+916301921161</a></p>
+				<div id="social-links" class="social-links">
+        <a href="https://www.linkedin.com/in/rahul-ravuri-97aa19142/" target="_blank" class="social-link">
+            <img src="./Icons/linkedin.png" alt="LinkedIn" style="width: 30px; height: 30px;">
+			<p>LinkedIn</p>
+        </a>
+    </div>
             </div>
+			
     </footer>
 	
 	<script>
-const skillsBtn = document.querySelector('.skills-btn');
+const skillsBtn = document.getElementById('open-popup');
+const temp=document.getElementById('open-popup-img');
 const popup = document.getElementById('skills-popup');
 const closeBtn = document.querySelector('.close-btn');
 
-// Show the popup when the button is clicked
-skillsBtn.addEventListener('click', () => {
+// Show the popup when the button is clicked (both on image and text)
+skillsBtn.addEventListener('click', (event) => {
+    event.preventDefault(); 
+	console.log('Skills button clicked');
     popup.style.display = 'block';
+	 console.log(popup.style.display); 
 });
 
 // Close the popup when the close button is clicked
 closeBtn.addEventListener('click', () => {
     popup.style.display = 'none';
+	console.log('Skills button clickedsdkd');
 });
 
+// Close the popup if clicked outside
 window.addEventListener('click', (event) => {
-    // Check if the clicked element is outside the popup content
-    if (!popup.contains(event.target) && event.target !== skillsBtn) {
-        popup.style.display = 'none';
+    // Check if the click is outside of the popup and skillsBtn
+    if (!popup.contains(event.target) && event.target !== skillsBtn && event.target !== temp) {
+        popup.style.display = 'none'; // Hide the popup
+        console.log('Popup hidden because of outside click');
     }
 });
 
@@ -167,7 +229,7 @@ function changeFooterColor() {
     setTimeout(() => {
  
             footer.style.backgroundColor = ''; // Reset to original color
-    }, 1000); // Green stays for 1 second
+    }, 600); // Green stays for 1 second
 }
 document.querySelector('.nav-btn[href="#projects"]').addEventListener('click', (event) => {
     event.preventDefault(); // Prevent default anchor behavior
@@ -189,9 +251,24 @@ function changeProjectsColor() {
 
         setTimeout(() => {
             card.style.backgroundColor = ''; // Reset to original color
-        }, 1000); // Green stays for 1 second
+        }, 600); // Green stays for 1 second
     });
 }
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Show the button when scrolling down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
 </script>
 
 </body>
