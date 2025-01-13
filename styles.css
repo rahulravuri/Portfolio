@@ -46,36 +46,13 @@ nav {
 .nav-links li a:hover {
     color: #0066ff;
 }
-
-.nav-btn {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #0066ff;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.nav-btn:hover {
-    background-color: #0055cc;
-    transform: translateY(-3px);
-}
-
-.nav-btn:active {
-    background-color: #0041a1;
-    transform: translateY(1px);
-}
-
-/* Hero Section */
 .hero-container {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    height: 100vh; /* Ensures full screen height */
+    margin-top: 80px; /* Adjust this value to move the hero section down */
 }
 .hero {
     text-align: center;
@@ -95,7 +72,6 @@ nav {
     font-size: 1.2rem;
     margin: 1rem 0;
 }
-
 /* Projects Section */
 .projects-section {
     padding: 4rem 2rem;
@@ -185,17 +161,16 @@ footer {
 }
 .footer-links a:hover {
     color: #0066ff;
-}
-/* General Popup Styling */
+}/* General Popup Styling */
 .popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; /* Increased width */
+    width: 80%; /* Adjusted for better responsiveness */
     max-width: 900px;
     height: 70%; /* Adjust height */
-    background: #f9f9f9;
+    background: #fffff8; /* White background */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: none; /* Hidden by default */
@@ -244,7 +219,7 @@ footer {
 }
 
 .skills-box span {
-    background: #fff;
+    background: #fff; /* White background */
     border: 1px solid #ddd;
     padding: 0.4rem 0.8rem; /* Smaller padding */
     font-size: 0.9rem; /* Smaller font */
@@ -258,11 +233,12 @@ footer {
 }
 
 .skills-box span:hover {
-    background: #333;
-    color: #fff;
+    background: #28a745; /* Green background on hover */
+    color: #fff; /* White text color on hover */
     transform: scale(1.05); /* Slight hover effect */
 }
 
+/* Extra Popup Styles */
 .popup-content h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -296,8 +272,29 @@ footer {
 
 .skills-box span:hover {
     transform: scale(1.05);
-    background-color: #e0e7ff;
-    color: #333;
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+
+	.nav-links {
+		list-style: none;
+		display: flex;
+		gap: 15px;
+	}
+
+	.nav-btn {
+		display: flex;
+		align-items: center;
+		text-decoration: none; /* Removes the underline */
+		color: #333; /* Set the text color */
+		font-size: 16px;
+	}
+
+.nav-icon {
+    width: 20px; /* Adjust the icon size */
+    height: 20px;
+    margin-right: 8px; /* Spacing between the icon and text */
 }
 
 /* Skills Button */
@@ -323,6 +320,201 @@ footer {
     background-color: #0041a1;
     transform: translateY(1px);
 }
+
 footer {
-            transition: background-color 1s ease; /* Smooth color transition */
-        }
+    transition: background-color 1s ease; /* Smooth color transition */
+}
+
+/* Media query for mobile devices (phones) */
+@media (max-width: 767px) {
+    /* General body settings */
+    body {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    /* Header */
+    header {
+        padding: 0.8rem 1.5rem; /* Reduce padding */
+    }
+    
+    .logo {
+        font-size: 1.2rem; /* Smaller logo font size */
+    }
+
+    .nav-links {
+        gap: 1rem; /* Reduce space between nav items */
+    }
+
+    .nav-links li a {
+        font-size: 1rem; /* Smaller nav link font size */
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1.2rem; /* Smaller button */
+        font-size: 0.9rem; /* Smaller button font */
+    }
+
+    /* Hero Section */
+    .hero-container {
+        padding: 1.5rem; /* Less padding for mobile */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem; /* Smaller font size for heading */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 2rem 1rem; /* Less padding */
+    }
+
+    .projects-section h2 {
+        font-size: 1.5rem; /* Smaller section heading */
+    }
+
+    .project-card {
+        width: 200px; /* Smaller width for cards */
+        padding: 1rem; /* Less padding */
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+    .project-card p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .project-card .btn {
+        padding: 0.4rem 0.8rem; /* Smaller button */
+        font-size: 0.9rem; /* Smaller button text */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 0; /* Less padding */
+    }
+
+    .footer-content p {
+        font-size: 0.9rem; /* Smaller text */
+    }
+
+    /* Skills Section */
+    .skills-box span {
+        font-size: 0.8rem; /* Smaller font */
+        padding: 0.4rem 0.8rem; /* Less padding */
+    }
+
+    .skills-btn {
+        padding: 0.6rem 1.2rem; /* Smaller button */
+        font-size: 0.9rem; /* Smaller text */
+    }
+
+    /* Popup */
+    .popup {
+        width: 90%; /* Full width for mobile */
+        height: 80%; /* Full height for mobile */
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .popup h2 {
+        font-size: 1.5rem; /* Smaller popup heading */
+    }
+
+    .popup-content {
+        padding: 1rem; /* Less padding in content */
+    }
+
+    /* Close button in popup */
+    .close-btn {
+        font-size: 1.2rem; /* Smaller close button */
+    }
+
+    /* Adjust skill category headings */
+    .skills-category h3 {
+        font-size: 1rem; /* Smaller category heading */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header, footer {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .logo {
+        font-size: 1.5rem; /* Make the logo smaller on mobile */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically on small screens */
+        align-items: center; /* Center align the links */
+    }
+
+    .nav-btn {
+        margin: 0.5rem 0; /* Add spacing between nav links */
+    }
+
+    .contact-info p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+
+#open-popup {
+    border: none;  /* Remove default button border */
+  
+}
+
+.resume-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.btn-download {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 50%; /* You can adjust the width as needed */
+    box-sizing: border-box; /* Ensures the width respects padding */
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+#social-links {
+    display: flex;
+    justify-content: center; /* Centers the social links horizontally */
+    gap: 20px; /* Adds space between the social links */
+    margin-top: 15px; /* Adds some margin between the contact and social links */
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column; /* Align the image and text vertically */
+    align-items: center; /* Center the image and text */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Normal text color */
+}
+
+.social-link p {
+    margin-top: 5px; /* Space between image and text */
+    color: inherit; /* Inherit color from parent */
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.social-link:hover {
+    color: #0073b1; /* Change color on hover (LinkedIn blue) */
+}
