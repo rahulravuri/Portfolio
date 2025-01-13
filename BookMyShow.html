@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book My Show - Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+	<style>
+        /* Styles for Microservices Section */
+        .microservices-section {
+            padding: 2rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .microservices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-more-info {
+            padding: 0.5rem 1rem;
+            background: #0066ff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-more-info:hover {
+            background: #0055cc;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            text-align: left;
+            position: relative;
+        }
+
+        .popup-content h3 {
+            margin-bottom: 1rem;
+        }
+
+        .popup-content p {
+            margin-bottom: 1rem;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">Rahul Ravuri</div>
+            <ul class="nav-links">
+                <li><a href="Main.html" class="nav-btn">Home</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Book My Show Project Page Content -->
+    <main class="bookmyshow-container">
+        <section class="project-hero">
+            <h1>Book My Show</h1>
+            <p>This is a web-based movie ticket booking system. The application allows users to view movie listings, select showtimes, choose seats, and book tickets.</p>
+        </section>
+
+        <!-- Project Description and Tools Used -->
+        <section class="project-description">
+            <h2>About The Project</h2>
+            <div class="description-wrapper">
+                <!-- Left Section: About the Project -->
+                <div class="description-text">
+                    <p>This project is designed as a simulation of an online ticket booking system similar to BookMyShow. It’s built using modern web technologies and aims to provide users with an intuitive, easy-to-use interface for booking movie tickets online.</p>
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Browse movie listings and filter by genre, language, etc.</li>
+                        <li>View available showtimes and theaters in their area.</li>
+                        <li>Choose seats for a show and book tickets online.</li>
+                        <li>Manage their profile and view past bookings.</li>
+                    </ul>
+                    <p><em>With a user-friendly interface and secure payment integration, this application aims to replicate the core features of BookMyShow.</em></p>
+                </div>
+
+                <!-- Right Section: Tools Used -->
+                <div class="tools-used">
+                    <h3>Tools Used</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
+                        <li><strong>Backend:</strong> Node.js, Express.js</li>
+                        <li><strong>Database:</strong> MongoDB</li>
+                        <li><strong>Authentication:</strong> JWT, OAuth</li>
+                        <li><strong>Deployment:</strong> AWS, Heroku</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+	 <section class="microservices-section">
+        <h2>Microservices Overview</h2>
+        <div class="microservices-grid">
+            <div class="service-card">
+                <h3>Auth Service</h3>
+                <p>Handles user authentication and authorizationsdndskjncksdc.</p>
+                <button class="btn-more-info" onclick="showPopup('auth')">More Info</button>
+				 <section class="cta">
+        </section>
+            </div>
+            <div class="service-card">
+                <h3>Booking Service</h3>
+                <p>Manages ticket bookings and reservations.sdkcnsdkjcnksdnckjdsnc</p>
+                <button class="btn-more-info" onclick="showPopup('booking')">More Info</button>
+            </div>
+            <div class="service-card">
+                <h3>Movie Service</h3>
+                <p>Provides details about movies, genres, and languages.sdkjcnksjdncksdnckds</p>
+                <button class="btn-more-info" onclick="showPopup('movie')">More Info</button>
+            </div>
+            <div class="service-card">
+                <h3>Payment Service</h3>
+                <p>Processes payments securely and manages transactions.dkcjnksdjncksdncksdnc</p>
+                <button class="btn-more-info" onclick="showPopup('payment')">More Info</button>
+            </div>
+            <div class="service-card">
+                <h3>Database</h3>
+                <p>Stores all application data, including users and transactions.sdcnkdsjnckjsdnc</p>
+                <button class="btn-more-info" onclick="showPopup('database')">More Info</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popup Section -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content" id="popup-content">
+            <button class="close-btn" onclick="hidePopup()">×</button>
+            <h3 id="popup-title"></h3>
+            <p id="popup-description"></p>
+			
+            <a href="https://github.com/your-username/bookmyshow" target="_blank" class="btn-more-info">View on GitHub</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rahul Ravuri. Built with the help of ChatGPT.</p>
+        <div id="contact" class="contact-info">
+            <p>Email: <a href="mailto:ram@example.com">ram@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+        </div>
+    </footer>
+<script>
+        // Popup data for each service
+        const popupData = {
+            auth: {
+                title: 'Auth Service',
+                description: 'The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.The Auth Service manages user authentication and authorization using secure methods like JWT and OAuth. It ensures secure access to the application.'
+            },
+            booking: {
+                title: 'Booking Service',
+                description: 'The Booking Service handles the core booking functionality, including seat selection, showtime management, and ticket generation.'
+            },
+            movie: {
+                title: 'Movie Service',
+                description: 'The Movie Service provides APIs for fetching movie details, genres, and languages. It integrates with third-party movie databases for up-to-date information.'
+            },
+            payment: {
+                title: 'Payment Service',
+                description: 'The Payment Service securely processes payments using various gateways. It also manages transaction histories and payment statuses.'
+            },
+            database: {
+                title: 'Database',
+                description: 'The database is a centralized system for storing all application data, including user information, bookings, transactions, and movie details.'
+            }
+        };
+
+        // Show popup function
+        function showPopup(serviceKey) {
+            const data = popupData[serviceKey];
+            document.getElementById('popup-title').innerText = data.title;
+            document.getElementById('popup-description').innerText = data.description;
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        // Hide popup function
+        function hidePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
