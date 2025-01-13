@@ -3,67 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name</title>
+    <title>Book My Show - Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+	<style>
+       #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-image: url('./Icons/up-arrow.png'); /* Replace with your image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            display: none; /* Hidden by default */
+            z-index: 1000;
+        }
+        #scrollTopBtn:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body>
+	
+ <button id="scrollTopBtn" onclick="scrollToTop()"></button>
+    <!-- Navigation Bar -->
     <header>
-        <h1>Project Name</h1>
         <nav>
-            <a href="Main.html">Back to Portfolio</a>
+            <div class="logo">Rahul Ravuri</div>
+            <ul class="nav-links">
+              <li>     
+        <a href="index.html" class="nav-btn">
+            <img src="./Icons/home.png" alt="Project Icon" class="nav-icon">
+            Home
+        </a>
+    </li>
+   
+            </ul>
         </nav>
     </header>
-    <section id="project-details">
-        <h2>About the Project</h2>
-        <p>
-            This project is a [brief description of your project]. It was created to [state the purpose or problem it solves]. The project includes features such as:
-        </p>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-    </section>
 
-    <section id="technologies">
-        <h2>Technologies Used</h2>
-        <p>
-            This project was built using the following technologies:
-        </p>
-        <ul>
-            <li>Technology 1 (e.g., HTML)</li>
-            <li>Technology 2 (e.g., CSS)</li>
-            <li>Technology 3 (e.g., JavaScript)</li>
-        </ul>
-    </section>
+    <!-- Book My Show Project Page Content -->
+    <main class="bookmyshow-container">
+        <section class="project-hero">
+            <h1>ChessGame Application</h1>
+            <p>An interactive multiplayer chess game with real-time move tracking, undo functionality, and king safety alerts.</p>
+        </section>
 
-    <section id="project-preview">
-        <h2>Project Preview</h2>
-        <p>
-            Below is a preview of the project:
-        </p>
-        <img src="project-image.jpg" alt="Project Screenshot" style="max-width: 100%; height: auto;">
-        <!-- Alternatively, you can embed a video -->
-        <!-- <video controls>
-            <source src="project-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video> -->
-    </section>
+        <!-- Project Description and Tools Used -->
+        <section class="project-description">
+            <h2>About The Project</h2>
+            <div class="description-wrapper">
+				<div class="description-text">
+				<p>This project is a multiplayer chess game designed to offer an engaging and interactive online chess experience. It allows real-time gameplay with move tracking, player turn synchronization, and ensures a smooth, responsive UI across all devices.</p>
+				<p><strong>Key Features:</strong></p>
+				<ul>
+				<li>Real-time multiplayer gameplay</li>
+				<li>Move tracking and history for players</li>
+				<li>Undo functionality to reverse moves</li>
+				<li>King safety alerts for check situations</li>
+				<li>Player turn system with synchronization</li>
+				</ul>
+				<p><em>With an interactive and engaging interface, the chess game aims to bring a seamless online experience for chess enthusiasts.</em></p>
+				 
+    <ul>
+        <li><strong>Basic View Screenshot:</strong> The first screenshot shows the initial chessboard layout with pieces ready for the game to begin.</li>
+        <li><strong>Move Suggestions Screenshot:</strong> The second screenshot illustrates the available moves when a player selects a piece, helping them strategize their next move.</li>
+        <li><strong>Game Alerts Screenshot:</strong> The third screenshot displays the alert when an important message, like a check situation, needs to be communicated to the players.</li>
+    </ul>
+				</div>
+				
+				   <div class="tools-used">
+				   <p><strong>Basic View </strong></p>
+                    <div class="Chess-Image">
+					
+				<a href="./Icons/ChessGameView.png" target="_blank">
+                   <img src="./Icons/ChessGameView.png" alt="Chess Game Screenshot" class="project-screenshot">
+				</a>
+                </div>
+				<p><strong>Move Suggestions</strong></p>
+				 <div class="Chess-Image">
+				 
+				<a href="./Icons/Available_Moves.png" target="_blank">
+                   <img src="./Icons/Available_Moves.png" alt="Chess Game Screenshot" class="project-screenshot">
+					</a>
+                </div>
+				 <p><strong>Game Alerts</strong></p>
+				 <div class="Chess-Image">
+				
+				<a href="./Icons/KingNotSafeAlert.png" target="_blank">
+                   <img src="./Icons/KingNotSafeAlert.png" alt="Chess Game Screenshot" class="project-screenshot">
+        </a>
+                </div>
+                </div>
 
-    <section id="links">
-        <h2>Links</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/yourusername/your-repository" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
-            </li>
-            <li>
-                <a href="https://example.com/live-project" target="_blank" rel="noopener noreferrer">Live Project</a>
-            </li>
-        </ul>
-    </section>
+                <!-- Right Section: Tools Used -->
+               
+            </div>
+        </section>
+		 <a href="https://github.com/rahulravuri/ChessGame" class="view-github-btn" target="_blank">View GitHub</a>
+    </main>
 
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Rahul Ravuri. Built with the help of ChatGPT.</p>
+        <div id="contact" class="contact-info">
+            <p>Email: <a href="mailto:rahulravuri057@gmail.com">rahulravuri057@gmail.com</a></p>
+            <p>Phone: <a href="tel:+916301921161">+916301921161</a></p>
+        </div>
     </footer>
+<script>
+
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        // Show the button when scrolling down
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
