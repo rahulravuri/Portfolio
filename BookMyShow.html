@@ -125,7 +125,7 @@
     <span class="close-btn" onclick="hidePopup()">×</span>
     <h2 id="popup-title"></h2>
     <p id="popup-description"></p>
-    <a href="https://github.com/your-repository" class="view-github-btn" target="_blank">View GitHub</a>
+    <a href="#" class="view-github-btn" id="popup-href" target="_blank">View GitHub</a>
 </div>
     </div>
 
@@ -142,6 +142,7 @@
         const popupData = {
             auth: {
                 title: 'Auth Service',
+                github:'https://github.com/rahulravuri/Auth',
                 description: `
             The Auth Service is responsible for authentication and authorization in the application. 
             <strong>Key features include:</strong>
@@ -161,6 +162,7 @@
 				
             gateway: {
                 title: 'Gateway Service',
+                github:'https://github.com/rahulravuri/ApiGateway',
                 description: `
             The Gateway Service acts as the entry point for all client requests, ensuring they are routed to the appropriate backend services efficiently. 
             <strong>Key features include:</strong>
@@ -173,6 +175,7 @@
             },
             movie: {
                 title: 'Movie Service',
+                github:'https://github.com/rahulravuri/BookMyShow',
                 description:  `
             The Movie Service is the core of the BookMyShow application, enabling both users and admins to manage movies, shows, and theaters. 
             <strong>Key features include:</strong>
@@ -185,6 +188,7 @@
 				},
             payment: {
                 title: 'Payment Service',
+                github:'https://github.com/rahulravuri/payments',
                 description: `
             The Payment Service securely processes payments through multiple payment gateways. After a payment is successfully processed or fails, 
             it notifies the Movie Service to update the booking status accordingly.
@@ -198,6 +202,7 @@
 		},
             database: {
                 title: 'Database',
+                github:'https://github.com/rahulravuri/DataBase',
                 description:
 `
             The Database Service is a central system that stores all the application data, including user information, movie details, bookings, and transactions. 
@@ -216,11 +221,13 @@
     document.getElementById('popup-title').innerText = data.title;
     document.getElementById('popup-description').innerHTML = data.description;
     document.getElementById('popup-overlay').style.display = 'flex';
+    document.getElementById('popup-href').href = data.github;
 }
 
 // Hide popup function
 function hidePopup() {
     document.getElementById('popup-overlay').style.display = 'none';
+    document.getElementById('popup-href').href='#';
 }
 
 // Close popup if the user clicks outside the content area
