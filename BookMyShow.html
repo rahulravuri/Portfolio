@@ -64,10 +64,10 @@
                     <p>This project is designed as a simulation of an online ticket booking system similar to BookMyShow. It’s built using modern web technologies and aims to provide users with an intuitive, easy-to-use interface for booking movie tickets online.</p>
                     <p><strong>Key Features:</strong></p>
                     <ul>
-                        <li>Browse movie listings and filter by genre, language, etc.</li>
-                        <li>View available showtimes and theaters in their area.</li>
-                        <li>Choose seats for a show and book tickets online.</li>
-                        <li>Manage their profile and view past bookings.</li>
+                        <li>Implemented signup and login functionality in the BookUmShow application, enabling secure user authentication and seamless access to the platform. </li>
+                        <li>Browse Movies and view available showtimes and theaters effortlessly.</li>
+                        <li>Book Tickets, select preferred seats and complete bookings online with ease.</li>
+                        <li>Update personal details and access past booking history conveniently</li>
                     </ul>
                     <p><em>With a user-friendly interface and secure payment integration, this application aims to replicate the core features of BookMyShow.</em></p>
                 </div>
@@ -76,10 +76,11 @@
                 <div class="tools-used">
                     <h3>Tools Used</h3>
                     <ul>
-                        <li><strong>Backend:</strong>SpringBoot</li>
+                        <li><strong>Backend:</strong>Java SpringBoot</li>
                         <li><strong>Database:</strong> MySQL</li>
                         <li><strong>Authentication:</strong> JWT, OAuth</li>
                         <li><strong>Deployment:</strong> Docker</li>
+
                     </ul>
                 </div>
             </div>
@@ -190,11 +191,9 @@
                 title: 'Payment Service',
                 github:'https://github.com/rahulravuri/payments',
                 description: `
-            The Payment Service securely processes payments through multiple payment gateways. After a payment is successfully processed or fails, 
-            it notifies the Movie Service to update the booking status accordingly.
+           The Payment Service securely processes payments through multiple payment gateways. Currently, it supports a single payment per booking, with the flexibility to accommodate multiple payments in future enhancements. After a payment is successfully processed or fails, it notifies the Movie Service to update the booking status accordingly.
             <strong>Key features include:</strong>
             <ul>
-                <li><strong>Multiple Payment Gateways:</strong> Integrates with various payment gateways to process payments securely and efficiently.</li>
                 <li><strong>Payment Success/Failure:</strong> After processing a payment, the service sends the status to the Movie Service to update the show or ticket status.</li>
                 <li><strong>Transaction Management:</strong> Tracks transaction status and history for auditing and refund processes.</li>
             </ul>
